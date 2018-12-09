@@ -237,8 +237,8 @@ class Thinker:
 
     # 숫자 제시
     def suggest(self):
-        s = nctr.pick(self.poss_nums)
-        self.history.append('%d%d%d' % (s[0], s[1], s[2]))
-        return s
+        sug = nctr.pick(self.poss_nums)
+        self.history.append('%d%d%d' % (sug[0], sug[1], sug[2]))
+        return sug
 
     
