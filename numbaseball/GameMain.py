@@ -76,6 +76,7 @@ def com_v_com_loop(p1, p2, j, numb):
             avr_cnt += tn_cnt
     avr_cnt /= numb
     contents += 'com1 : '+str(p1_w)+', com2 : '+str(p2_w)+', draw : '+str(numb - p1_w - p2_w)+'\naverage : '+str(avr_cnt)
+    print(contents)
     f.write(contents)
     f.close()
 
