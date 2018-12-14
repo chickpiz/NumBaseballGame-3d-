@@ -76,7 +76,6 @@ def com_v_com_loop(p1, p2, j, numb):
             avr_cnt += tn_cnt
     avr_cnt /= numb
     contents += 'com1 : '+str(p1_w)+', com2 : '+str(p2_w)+', draw : '+str(numb - p1_w - p2_w)+'\naverage : '+str(avr_cnt)
-    print(contents)
     f.write(contents)
     f.close()
 
@@ -84,20 +83,20 @@ def hum_v_com(com, jud):
     # 숫자 입력받기
     while True:
         pnum_ = input('숫자를 입력하세요. :')
-        if len(pnum_) != 3:
+        if len(pnum_) != 3 or type(pnum_) is not str:
             print('세 자리 숫자만 입력해주세요.')
             continue
         break
     pnum = nctr.toList(pnum_)
     input('당신의 숫자는 '+str(pnum[0])+str(pnum[1])+str(pnum[2])+' 입니다. 엔터를 누르면 게임이 시작됩니다.')
-    # 대결 시작
+    # 시작
     tn_cnt = 0
     while True:
         tn_cnt += 1
         print('[Round '+str(tn_cnt)+']')
         while True:
             p_s_ = input('숫자 제시 : ')
-            if len(p_s_) != 3:
+            if len(p_s_) != 3 or type(p_s_) is not str:
                 print('세 자리 숫자만 입력해주세요.')
                 continue
             p_s = nctr.toList(p_s_)
